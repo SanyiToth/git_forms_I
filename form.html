@@ -3,17 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <style>
+        input:required {
+            border: 1px solid red;
+            background: pink;
+        }
+
+        input:disabled {
+            pointer-events: none;
+            border: 1px solid green;
+            background: grey;
+        }
+    </style>
 </head>
 <body>
-<form action="">
+<form id="form-application">
     <label for="fullname">Fullname</label><br>
     <input id="fullname" type="text"><br>
+    <label for="subject">Subject</label><br>
+    <input id="subject" type="text"><br>
     <label for="email">Email</label><br>
     <input id="email" type="email"><br><br>
-    <textarea name="message" id="message" cols="30" rows="10"></textarea><br><br>
+    <textarea cols="30" id="message" name="message" rows="10"></textarea><br><br>
     <input type="submit" value="Submit">
+    <p id="feedback"></p>
 </form>
-
 <script src="form.js"></script>
 </body>
-</html>
